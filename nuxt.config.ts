@@ -41,5 +41,13 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+  
+  // Supabase 설정 - 환경 변수에서 값 가져오기
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseKey: process.env.SUPABASE_ANON_KEY
+    }
   }
 })
